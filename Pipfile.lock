@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "07838b38ee6bdf5af02e6f4edb37d489da120798643888e68ffdeb75477ccaf0"
+            "sha256": "d0158942cec126ed783406a746bd44b413493e3236dd3c65d7d619fa3eac3295"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,13 @@
             ],
             "index": "pypi",
             "version": "==3.6.1"
+        },
+        "fontawesomefree": {
+            "hashes": [
+                "sha256:e12edad71b6cf6993fc7c6aea6367e131f2f247b6435faca99b12329bacd2b27"
+            ],
+            "index": "pypi",
+            "version": "==6.4.0"
         },
         "sqlparse": {
             "hashes": [
