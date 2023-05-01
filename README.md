@@ -7,3 +7,4 @@ Django interface to upload html pages and display pages in magazine format
  - Python
  - Django
  - Tinymce
+ - cripy-forms
