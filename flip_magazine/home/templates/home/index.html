@@ -6,7 +6,40 @@
 {% endblock %}
 
 {% block content %}
-    <div class="montserrat h6">Home Page</div>
+    <div class="btn btn-outline-dark rounded-pill m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Magazine</div>
+
+    <!-- off canvas model -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          
+          <h5 class="offcanvas-title text-start d-block" id="offcanvasExampleLabel">Magazines </h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>              
+        </div>
+    </div>
+
+    <!-- Add Magazine modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Magazine</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="{% url 'add_magazine' %}" method="post">
+              {% csrf_token %}
+              {{form|crispy}}
+              <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Submit</button>
+            </form>                
+            </div>       
+        </div>
+      </div>
+    </div>
 {% endblock %}
 
 {% block extra_css %}
